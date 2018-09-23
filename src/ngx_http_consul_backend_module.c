@@ -56,6 +56,8 @@ ngx_module_t ngx_http_consul_backend_module = {
   NGX_MODULE_V1_PADDING
 };
 
+// func LookupBackend(svc *C.char) *C.char {
+
 static ngx_int_t
 ngx_http_consul_backend(ngx_http_request_t *r, ngx_str_t *res, ngx_http_variable_value_t *v) {
   void *go_module = dlopen("ngx_http_consul_backend_module.so", RTLD_LAZY);
